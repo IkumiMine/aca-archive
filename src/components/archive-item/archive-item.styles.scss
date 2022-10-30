@@ -1,0 +1,27 @@
+.archive-item-container{
+    /*
+    &:nth-child(2) {
+        margin-top: 70.06px;
+    }
+
+    &:nth-child(3) {
+        margin-top: 106.24px;
+    }
+
+    &:nth-child(4) {
+        margin-top: 70.06px;
+    }
+    */
+
+    .archive-item {
+        width: 362px;
+        height: 643.56px;
+        background-color: antiquewhite;
+        border-radius: 26.56px;
+        margin-bottom: 10.46px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
