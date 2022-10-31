@@ -1,18 +1,22 @@
-import { ReactComponent as CloseSign } from '../../assets/close-sign.svg';
-import './archive-modal.styles.scss'; 
+import './archive-modal.styles.scss';
+import ArchiveItem from '../archive-item/archive-item.component'; 
 
-const ArchiveModal = ({detail, handleRemove}) => {
+const ArchiveModal = ({detailObj, setSelectedElementID}) => {
 
-    const {header, country, content} = detail;
 
     return (
         <div className='archive-modal-container'>
-            <div onClick={handleRemove}>
-                <CloseSign />  
-            </div>  
-            <p className='archive-modal-header'>{header}</p>
-            <p className='archive-modal-country'>{country}</p>
-            <p className='archive-modal-content'>{content}</p>               
+            <button
+              onClick={() => {
+                setSelectedElementID(false);
+              }}
+            >
+              X
+            </button>
+            
+            <p className='archive-modal-header'>{detailObj.id}</p>
+            <p className='archive-modal-country'>{detailObj.country}</p>
+            
         </div>
     )
 }
