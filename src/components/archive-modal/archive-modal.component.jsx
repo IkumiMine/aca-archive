@@ -1,20 +1,25 @@
 import { ReactComponent as CloseSign } from '../../assets/close-sign.svg';
 import './archive-modal.styles.scss'; 
 
-const ArchiveModal = ({detail, handleRemove}) => {
+const ArchiveModal = ({detailObj, setOpenModal}) => {
 
-    const {header, country, content} = detail;
+    const {header, country, content } = detailObj
 
     return (
-        <div className='archive-modal-container'>
-            <div onClick={handleRemove}>
-                <CloseSign />  
-            </div>  
-            <p className='archive-modal-header'>{header}</p>
-            <p className='archive-modal-country'>{country}</p>
-            <p className='archive-modal-content'>{content}</p>               
-        </div>
-    )
+            <div className='archive-modal-container'>
+                <div
+                    id='close-sign'  
+                    onClick={() => {
+                    setOpenModal(false);
+                }}
+                >
+                    <CloseSign />  
+                </div>  
+                <p className='archive-modal-header'>{header}</p>
+                <p className='archive-modal-country'>{country}</p>
+                {/*<p className='archive-modal-content'>{content}</p>*/}                         
+            </div>
+        )
 }
 
 export default ArchiveModal;

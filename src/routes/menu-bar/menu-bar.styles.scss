@@ -1,0 +1,22 @@
+.menu-bar-container {
+    position: absolute;
+    left: 42.15%;
+    top: 85.35%;
+    height: 47px;
+    background: rgba(41, 41, 41, 0.1);;
+    backdrop-filter: blur(1px);
+    border-radius: 16px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 23px;
+    z-index: 100;
+    padding-left: 20px;
+
+    .menu-links {
+        color: #fff;
+        text-decoration: none;
+        padding: 0;
+        margin: 12px 20px 12px 0;
+        display: inline-block;
+    }
+}

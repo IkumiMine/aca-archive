@@ -1,4 +1,35 @@
 .archive-modal-container {
-    background-color: saddlebrown;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(150px);
     position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #F6F6F6;
+    font-size: 100px;
+    letter-spacing: -5%;
+    line-height: 90%;
+
+    #close-sign {
+        position: absolute;
+        left: 87.53%;
+        right: 9.27%;
+        top: 7.71%;
+        bottom: 87.79%;
+    }
+
+    .archive-modal-header {
+        position: absolute;
+        left: 7.08%;
+        top: 12.2%;
+        width: 85.8%;
+        height: 38%;
+    }
+
+    .archive-modal-country {
+        position: absolute;
+        left: 7.08%;
+        top: 68.1%;
+        width: 85.8%;
+    }
 }
