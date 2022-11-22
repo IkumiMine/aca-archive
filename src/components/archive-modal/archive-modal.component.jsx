@@ -1,5 +1,5 @@
 import './archive-modal.styles.scss';
-import ArchiveItem from '../archive-item/archive-item.component'; 
+import { ReactComponent as CloseSign } from '../../assets/close-sign.svg';
 
 const ArchiveModal = ({detailObj, setOpenModal}) => {
 

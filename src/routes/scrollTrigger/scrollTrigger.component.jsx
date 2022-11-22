@@ -23,7 +23,8 @@ const ScrollTriggerPractice = () => {
                 //An element (or selector text for the element) that should be pinned during the time that the ScrollTrigger is active, meaning it will appear to "stick" in its starting position while the rest of the content continues scrolling underneath it. 
                 //pin: true, 
                 //By default, padding will be added to the bottom (or right for horizontal: true) to push other elements down so that when the pinned element gets unpinned, the following content catches up perfectly.
-                pinSpacing: false 
+                pinSpacing: false,
+                markers: true, 
             });
         });
     

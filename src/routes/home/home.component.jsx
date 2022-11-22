@@ -13,7 +13,9 @@ const Home = () => {
     useEffect(() => {
         gsap.to("#aca-header", {
             scrollTrigger: {
-                trigger: "#aca-header",
+                trigger: ".main-overlay",
+                start: "top center",
+                scrub: 1,
             },    
             scale: 1,
             duration: 1.5,
