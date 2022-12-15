@@ -10,6 +10,7 @@ const Home = () => {
 
     const acaHeaderRef = useRef();
 
+    /*
     useEffect(() => {
         gsap.to("#aca-header", {
             scrollTrigger: {
@@ -21,22 +22,26 @@ const Home = () => {
             duration: 1.5,
           });
     }, []);
+    */
 
     return (
         <div className="main-page">
             <div className='main-overlay'>
 
-                <div className='header'>
-                    <p ref={acaHeaderRef} id='aca-header'>ACA</p>
-                </div>
-
-                <div id='site-details'>
-                    <p>A collection dedicated to the muse of Asian Cinema, archived through essays, video and design.</p>
-                </div>
-
-                <div className='links'>
-
-                </div>
+                <ul className='links'>
+                    <li><a>Substack</a></li>
+                    <li><a>Tiktok</a></li>
+                </ul>
+                
+                <h2 ref={acaHeaderRef} id='aca-header'>Archive</h2>
+                
+                {
+                    /*
+                    <div id='site-details'>
+                        <p>A collection dedicated to the muse of Asian Cinema, archived through essays, video and design.</p>
+                    </div>
+                    */
+                }
 
             </div>
         </div>

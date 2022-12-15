@@ -38,7 +38,7 @@ const Archive = () => {
             "content": "Shigeki lives in a retirement home. He is looked after by a friendly caregiver, Machiko. They don’t know that they share a painful secret: the loss of a dear one. After an accident during a drive in the country, they end up embarking on an exhausting and enlightening two-day journey in the forest.",
             "image": {Kogonada}, 
         },
-        {
+    /*    {
             "id": 4,
             "country": "Japan",
             "header": "Love Letter",
@@ -101,6 +101,7 @@ const Archive = () => {
             "content": "Shigeki lives in a retirement home. He is looked after by a friendly caregiver, Machiko. They don’t know that they share a painful secret: the loss of a dear one. After an accident during a drive in the country, they end up embarking on an exhausting and enlightening two-day journey in the forest.",
             "image": {DriveMyCar}, 
         },
+        */
     ]
 
     return (        

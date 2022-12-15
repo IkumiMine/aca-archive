@@ -60,39 +60,36 @@ const ArchiveItem = ({details}) => {
             }
         })
         
-        
-        //const copyOne = (() => { 
-            //let copied = [];
-            //contentFirst.map((cF, i) => {
-            //    copied = (contentFirst[i].cloneNode(true));
-            //})
-            let copyOne = contentFirst[0].cloneNode(true);
-            contentFirst[0].parentNode.appendChild(copyOne); // copy the first panel to the end (for seamless
-        //})     
+        /*
+        let copyOne = contentFirst[0].cloneNode(true);
+        contentFirst[0].parentNode.appendChild(copyOne); // copy the first panel to the end (for seamless    
 
-            let copyTwo = contentSecond[0].cloneNode(true);
-            contentSecond[0].parentNode.appendChild(copyOne);
+        let copyTwo = contentSecond[0].cloneNode(true);
+        contentSecond[0].parentNode.appendChild(copyTwo);
 
-            let copyThree = contentThird[0].cloneNode(true);
-            contentThird[0].parentNode.appendChild(copyOne);
+        let copyThree = contentThird[0].cloneNode(true);
+        contentThird[0].parentNode.appendChild(copyThree);
 
-            let copyFour = contentFourth[0].cloneNode(true);
-            contentFourth[0].parentNode.appendChild(copyOne);
-    
+        let copyFour = contentFourth[0].cloneNode(true);
+        contentFourth[0].parentNode.appendChild(copyFour);
+        */
+
         gsap.context(() => {
         
             contentFirst.forEach((cF, i) => {
                 gsap.to(cF, { 
                     yPercent: -1,
-                    duration: 2,
+                    duration: 5,
+                    ease: "none",
                 });
                 ScrollTrigger.create({
                     trigger: cF,
                     start: "top top",
                     pinSpacing: false,
+                    markers: true,
                 });
             });
-
+/*
             contentSecond.forEach((cF, i) => {
                 gsap.to(cF, { 
                     yPercent: -5,
@@ -102,6 +99,7 @@ const ArchiveItem = ({details}) => {
                     trigger: cF,
                     start: "top top",
                     pinSpacing: false,
+                    markers: true,
                 });
             });
 
@@ -114,6 +112,7 @@ const ArchiveItem = ({details}) => {
                     trigger: cF,
                     start: "top top",
                     pinSpacing: false,
+                    markers: true,
                 });
             });
 
@@ -125,139 +124,10 @@ const ArchiveItem = ({details}) => {
                     trigger: cF,
                     start: "top top",
                     pinSpacing: false,
-                });
-            });
-            
-            
-            /*
-            gsap.to(contentFirst,{
-                scrollTrigger: {
                     markers: true,
-                    trigger: ".archive-item-container",
-                    start: "top top",
-                    scrub: true,
-                    end: "max",
-                    /*
-                    onLeave: self => {
-                        console.log("onLeave");
-                        //copyOne();
-                        
-                        self.scroll(1);
-                        ScrollTrigger.update();
-                        console.log("onLeave" + self.scroll());
-                        
-                    },
-                    onLeaveBack: self => {
-                        console.log("onLeaveBack");
-                        //self.scroll(ScrollTrigger.maxScroll(window) - 2)
-                        /*
-                        self.scroll(ScrollTrigger.maxScroll(window-1));
-                        ScrollTrigger.update();
-                        console.log(ScrollTrigger.maxScroll(window));
-                        
-                    },
-                },
-            })*/
-            
-            
-            /*
-            contentSecond.forEach((c, i) => {
-                ScrollTrigger.create({
-                    trigger: ".archive-item-container",
-                    start: "top top",
-                    pinSpacing: false 
                 });
             });
-            contentThird.forEach((c, i) => {
-                ScrollTrigger.create({
-                    trigger: ".archive-item-container",
-                    start: "top top",
-                    pinSpacing: false 
-                });
-            });
-            contentFourth.forEach((c, i) => {
-                ScrollTrigger.create({
-                    trigger: ".archive-item-container",
-                    start: "top top",
-                    pinSpacing: false 
-                });
-            });
-            */
-            
-            /*
-            gsap.to(contentFirst, {
-                scrollTrigger: {
-                    trigger: ".archive-item-container",
-                    start: 0,
-                    end: "max",
-                    scrub: true,
-                    onLeave: self => {
-                        self.scroll(1);
-                        ScrollTrigger.update();
-                    },
-                    onLeaveBack: self => {
-                        self.scroll(ScrollTrigger.maxScroll(window-1));
-                        ScrollTrigger.update();
-                    }
-                },
-                ease: "none",
-                //yPercent: 10,    
-            });
-            gsap.to(contentSecond, {
-                scrollTrigger: {
-                    trigger: ".archive-item-container",
-                    start: 0,
-                    end: "max",
-                    scrub: true,
-                    onLeave: self => {
-                        self.scroll(1);
-                        ScrollTrigger.update();
-                    },
-                    onLeaveBack: self => {
-                        self.scroll(ScrollTrigger.maxScroll(window-1));
-                        ScrollTrigger.update();
-                    }
-                },
-                ease: "none",
-                //yPercent: -10,    
-            });
-            gsap.to(contentThird, {
-                scrollTrigger: {
-                    trigger: ".archive-item-container",
-                    start: 0,
-                    end: "max",
-                    scrub: true,
-                    onLeave: self => {
-                        self.scroll(1);
-                        ScrollTrigger.update();
-                    },
-                    onLeaveBack: self => {
-                        self.scroll(ScrollTrigger.maxScroll(window-1));
-                        ScrollTrigger.update();
-                    }
-                },
-                ease: "none",
-                //yPercent: 30,    
-            });
-            gsap.to(contentFourth, {
-                scrollTrigger: {
-                    trigger: ".archive-item-container",
-                    start: 0,
-                    end: "max",
-                    scrub: true,
-                    onLeave: self => {
-                        self.scroll(1);
-                        ScrollTrigger.update();
-                    },
-                    onLeaveBack: self => {
-                        self.scroll(ScrollTrigger.maxScroll(window-1));
-                        ScrollTrigger.update();
-                    }
-                },
-                ease: "none",
-                //yPercent: 50,    
-            });  
-            */  
+*/
         }, comp);
 
         let maxScroll;
@@ -273,7 +143,7 @@ const ArchiveItem = ({details}) => {
                 return snappedValue;
             }  
         });
-
+/*
         let pageScrollTriggerTwo = ScrollTrigger.create({ 
             snap(value) {
                 let snappedValue = gsap.utils.snap(1 / contentSecond.length, value);
@@ -309,6 +179,7 @@ const ArchiveItem = ({details}) => {
                 return snappedValue;
             }  
         });
+*/
 
         function onResize() {
             //A utility function for getting the maximum scroll value for a particular element/scroller.
@@ -328,6 +199,7 @@ const ArchiveItem = ({details}) => {
             }
         }, {passive: false});
 
+        /*
         window.addEventListener("scroll", e => {
             let scroll = pageScrollTriggerTwo.scroll() 
             if (scroll > maxScroll) {
@@ -360,7 +232,7 @@ const ArchiveItem = ({details}) => {
                 e.preventDefault();
             }
         }, {passive: false});
-
+        */
     }, []);
 
     //open/close modal state
